@@ -199,7 +199,7 @@ epd3in7_lvgl_adapter_handle epd3in7_lvgl_adapter_create(epd3in7_driver_handle *d
     handle.current_sectors.count = 0;
     handle.previous_sectors.items = NULL;
     handle.previous_sectors.count = 0;
-    handle.refresh_counter = 0;
+    handle.refresh_counter = 99; // Force GC on first use
     handle.is_initialized = false;
     handle.refresh_cycles_before_gc = refresh_cycles_before_gc;
     handle.default_mode = default_mode;

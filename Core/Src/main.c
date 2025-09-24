@@ -199,8 +199,8 @@ int main(void)
   lv_display_set_flush_cb(display, epd3in7_lvgl_adapter_flush);
   lv_display_set_rotation(display, LV_DISPLAY_ROTATION_90);
 
-  epd3in7_driver_init_1_gray(&epd3in7_drv);
-  epd3in7_driver_clear_1_gray(&epd3in7_drv, EPD3IN7_DRIVER_MODE_GC);
+  // epd3in7_driver_init_1_gray(&epd3in7_drv);
+  // epd3in7_driver_clear_1_gray(&epd3in7_drv, EPD3IN7_DRIVER_MODE_GC);
 
   int32_t random_offset_x = 0;
   int32_t random_offset_y = -20;

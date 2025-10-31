@@ -297,6 +297,7 @@ epd3in7_driver_status epd3in7_driver_sleep(epd3in7_driver_handle *handle, const 
         EPD3IN7_DRIVER_TRY(epd3in7_driver_send_command(handle, EPD_CMD_DEEP_SLEEP));
         EPD3IN7_DRIVER_TRY(epd3in7_driver_send_data(handle, 0x03));
         epd3in7_driver_send_end(handle);
+        HAL_GPIO_WritePin(handle->pins.reset_port, handle->pins.reset_pin, GPIO_PIN_RESET);
     }
     else
     {

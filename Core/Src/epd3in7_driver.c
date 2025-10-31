@@ -294,7 +294,7 @@ epd3in7_driver_status epd3in7_driver_sleep(epd3in7_driver_handle *handle, const 
     if (mode == EPD3IN7_DRIVER_SLEEP_DEEP)
     {
         epd3in7_driver_send_begin(handle);
-        EPD3IN7_DRIVER_TRY(epd3in7_driver_send_command(handle, EPD3IN7_DRIVER_SLEEP_DEEP));
+        EPD3IN7_DRIVER_TRY(epd3in7_driver_send_command(handle, EPD_CMD_DEEP_SLEEP));
         EPD3IN7_DRIVER_TRY(epd3in7_driver_send_data(handle, 0x03));
         epd3in7_driver_send_end(handle);
     }
